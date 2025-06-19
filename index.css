@@ -143,20 +143,102 @@ header {
   text-decoration: none;
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  .container {
+/* ======== RESPONSIVE GENERAL ======== */
+@media (max-width: 768px) {
+  header {
     flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 20px;
     text-align: center;
   }
 
-  .text-section {
-    max-width: 100%;
-    margin-bottom: 30px;
+  .logo {
+    margin: auto;
+    font-size: 28px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .nav-links li a {
+    margin: auto;
+    font-size: 16px;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .social-icons a img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .text-section h1 {
+    font-size: 2rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
   }
 
   .image-section img {
+    margin-top: 50px;
     width: 100%;
+    max-width: 350px;
     height: auto;
+  }
+
+  /* Evitar scroll horizontal */
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+/* ======== EXTRA RESPONSIVE para móviles pequeños ======== */
+@media (max-width: 480px) {
+  .logo {
+    margin: auto;
+    font-size: 24px;
+  }
+
+   .nav-links li a {
+    margin: auto;
+    font-size: 16px;
+  }
+
+  .text-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .tag {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .social-icons a img {
+    width: 24px;
+    height: 24px;
   }
 }
