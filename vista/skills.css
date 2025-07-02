@@ -31,26 +31,21 @@
 
 /* SKILLS */
 .skills {
-    margin-top: 50px;
+    margin-top: 30px;
     display: grid;
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    padding: 10px 20px;
     width: 100%;
+    justify-items: center;
 }
 
 .skills div {
-    height: 200px;
     width: 100%;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    flex-direction: column;
-    border-radius: 15px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    aspect-ratio: 1 / 1;
+    max-width: 250px;
 }
+
 .skills div:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -141,21 +136,32 @@
 
 @media (max-width: 480px) {
     .skills {
-                height: 100%;
-        width: 100%;
         grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 20px;
     }
 
     .skills div {
-        height: 100%;
-        width: 100%;
+        aspect-ratio: 1 / 1; /* Fuerza que alto = ancho */
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .skills img {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .skills p {
+        font-size: 16px;
     }
 
     .header-center h2 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .header-left a {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
